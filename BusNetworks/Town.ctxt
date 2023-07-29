@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Town
+comment1.params=name
+comment1.target=Town(java.lang.String)
+comment10.params=
+comment10.target=double\ get_lat()
+comment11.params=
+comment11.target=double\ get_long()
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=
+comment3.target=java.util.Set\ getNeighbours()
+comment4.params=node
+comment4.target=void\ addNeighbour(Town)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment6.params=n
+comment6.target=void\ set_visited(boolean)
+comment6.text=\n\ Setters\ for\ visited,\ longitude\ and\ latitude\n
+comment7.params=lat
+comment7.target=void\ set_lat(double)
+comment8.params=lon
+comment8.target=void\ set_long(double)
+comment9.params=
+comment9.target=boolean\ isVisited()
+comment9.text=\n\ Getters\ for\ visited,\ longitude\ and\ latitude\n
+numComments=12

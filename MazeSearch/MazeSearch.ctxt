@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=MazeSearch
+comment0.text=\n\ Search\ for\ a\ path\ to\ the\ goal\ in\ a\ maze.\n\ The\ maze\ consists\ of\ a\ graph\ of\ MazeCells\:\n\ \ Each\ cell\ has\ a\ collection\ of\ neighbouring\ cells.\n\ \ Each\ cell\ can\ be\ "visited"\ and\ it\ will\ remember\ that\ it\ has\ been\ visited\n\ \ A\ MazeCell\ is\ Iterable,\ so\ that\ you\ can\ iterate\ through\ its\ neighbour\ cells\ with\n\ \ \ \ for(MazeCell\ neighbour\ \:\ cell){....\n\n\ The\ maze\ has\ a\ goal\ cell\ (shown\ in\ green,\ two\ thirds\ towards\ the\ bottom\ right\ corner)\n\ The\ maze.getGoal()\ method\ returns\ the\ goal\ cell\ of\ the\ maze.\n\ The\ user\ can\ click\ on\ a\ cell,\ and\ the\ program\ will\ search\ for\ a\ path\n\ from\ that\ cell\ to\ the\ goal.\n\ \n\ Every\ cell\ that\ is\ looked\ at\ during\ the\ search\ is\ coloured\ \ yellow,\ and\ then,\n\ if\ the\ cell\ turns\ out\ to\ be\ on\ a\ dead\ end,\ it\ is\ coloured\ red.\n
+comment1.params=cell
+comment1.target=boolean\ exploreFromCell(MazeCell)
+comment1.text=\ CORE\n\ Search\ for\ a\ path\ from\ a\ cell\ to\ the\ goal.\n\ Return\ true\ if\ we\ got\ to\ the\ goal\ via\ this\ cell\ (and\ don't\n\ \ search\ for\ any\ more\ paths).\n\ Return\ false\ if\ there\ is\ not\ a\ path\ via\ this\ cell.\n\ \n\ If\ the\ cell\ is\ the\ goal,\ then\ we\ have\ found\ a\ path\ -\ return\ true.\n\ If\ the\ cell\ is\ already\ visited,\ then\ abandon\ this\ path\ -\ return\ false.\n\ Otherwise,\n\ \ Mark\ the\ cell\ as\ visited,\ and\ colour\ it\ yellow\ [and\ pause\:\ UI.sleep(delay);]\n\ \ Recursively\ try\ exploring\ from\ the\ cell's\ neighbouring\ cells,\ returning\ true\n\ \ \ if\ a\ neighbour\ leads\ to\ the\ goal\n\ \ If\ no\ neighbour\ leads\ to\ a\ goal,\n\ \ \ \ colour\ the\ cell\ red\ (to\ signal\ failure)\n\ \ \ \ abandon\ the\ path\ -\ return\ false.\n
+comment2.params=cell
+comment2.target=void\ exploreFromCellAll(MazeCell)
+comment2.text=\ COMPLETION\n\ Search\ for\ all\ paths\ from\ a\ cell,\n\ If\ we\ reach\ the\ goal,\ then\ we\ have\ found\ a\ complete\ path,\n\ \ so\ pause\ for\ 1000\ milliseconds\ \n\ Otherwise,\n\ \ visit\ the\ cell,\ and\ colour\ it\ yellow\ [and\ pause\:\ UI.sleep(delay);]\n\ \ Recursively\ explore\ from\ the\ cell's\ neighbours,\ \n\ \ unvisit\ the\ cell\ and\ colour\ it\ white.\n\ \n
+comment3.params=start
+comment3.target=void\ exploreFromCellShortest(MazeCell)
+comment3.text=\ CHALLENGE\n\ Search\ for\ shortest\ path\ from\ a\ cell,\n\ Use\ Breadth\ first\ search.\n
+comment4.params=
+comment4.target=void\ setupGui()
+comment4.text=\n\ Set\ up\ the\ interface\n
+comment5.params=
+comment5.target=void\ makeMaze()
+comment5.text=\n\ Creates\ a\ new\ maze\ and\ draws\ it\ .\n
+comment6.params=action\ x\ y
+comment6.target=void\ doMouse(java.lang.String,\ double,\ double)
+comment6.text=\n\ Clicking\ the\ mouse\ on\ a\ cell\ should\ make\ the\ program\n\ search\ for\ a\ path\ from\ the\ clicked\ cell\ to\ the\ goal.\n
+comment7.params=args
+comment7.target=void\ main(java.lang.String[])
+numComments=8
